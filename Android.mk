@@ -18,7 +18,7 @@ LOCAL_PATH:= $(call my-dir)
 
 ifneq ($(filter alioth,$(TARGET_DEVICE)),)
 
-FIRMWARE_IMAGES := $(wildcard $(LOCAL_PATH)/images/*)
+FIRMWARE_IMAGES := $(wildcard $(LOCAL_PATH)/images/*.img)
 
 $(foreach f, $(notdir $(FIRMWARE_IMAGES)), \
     $(call add-radio-file,images/$(f)))
